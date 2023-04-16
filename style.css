@@ -30,12 +30,26 @@
   padding: 2px;
 }
 
-#aggiungiElemento{
+#nomeElemento{
   margin-bottom: 20px;
+  display: flex;
 }
 
-#aggiungiElemento input{
+#nomeElemento input{
   width: 200px;
+}
+
+#nomeElemento i{
+  margin-left: 5px;
+  cursor: pointer;
+  background-color: bisque;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+#nomeElemento i:hover{
+  color: white;
+  background-color: black;
 }
 
 ul li{
@@ -45,9 +59,31 @@ ul li{
   list-style: none;
   border-radius: 10px;
   padding:0px 4px 0px 4px;
+  border: solid 1px black;
+  margin-bottom: 3px;
 }
 
 ul li:hover{
   cursor: pointer;
   background-color: rgba(11, 132, 132, 0.974) ;
+}
+
+.listItem{
+  display: flex;
+  position: relative;
+}
+
+.delete{
+  position: absolute;
+  right: 5px;
+  color: black;
+  cursor: pointer;
+}
+
+.delete:hover{
+  color: red;
+}
+
+.sbarrato{
+  text-decoration: line-through;
 }

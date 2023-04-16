@@ -29,18 +29,21 @@
 
     <main>
       <div id="main-wrapper">
-
-        <div id="aggiungiElemento">
-          <input type="text">
-          <div id="tastoAggiungi">
-
+        <div id="nomeElemento">
+          <input type="text" v-model="daFare" @keyup.enter="aggiungiTask">
+          <div id="tastoAggiungi" @click="aggiungiTask">
+            <i class="fa-solid fa-plus"></i>
           </div>
         </div>
+
         <!-- contenitore della lista  -->
         <div id="todoListContainer">
           <ul>
-            <li class="ListItem">
-              
+            <li class="listItem" v-for="(elemento, i) in lista" @click="elemento.fatto = !elemento.fatto" :class="{'sbarrato' : elemento.fatto}" > 
+              <div>{{elemento.testo}}</div>
+              <div class="delete" @click.stop="elimina(i,elemento)" >
+                <i class="fa-solid fa-xmark"></i>
+              </div> 
             </li>
           </ul>
         </div>
